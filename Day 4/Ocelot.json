@@ -1,0 +1,29 @@
+  {
+    "ReRoutes": [
+      {
+        "DownStreamPathTemplate": "/api/Passenger",
+        "DownStreamSchema": "https",
+        "DownStreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 44312
+          }
+        ],
+        "UpStreamPathTemplate": "/UberGateway/PassengerManagement",
+        "UpStreamHttpMethod": [ "Get", "Put", "Post" ]
+      },
+      {
+        "DownStreamPathTemplate": "/api/Driver",
+        "DownStreamSchema": "https",
+        "DownStreamHostAndPorts": [
+          {
+            "Host": "localhost",
+            "Port": 44353
+          }
+        ],
+        "UpStreamPathTemplate": "/UberGateway/DriverManagement",
+        "UpStreamHttpMethod": [ "Get", "Put", "Post" ]
+      }
+    ]
+  }
+
